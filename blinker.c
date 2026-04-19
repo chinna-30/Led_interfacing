@@ -1,0 +1,20 @@
+#include<LPC21XX.h>
+void delay_ms(int ms)
+{
+	unsigned int i;
+	for(;ms>0;ms--)
+	for(i=12000;i>0;i--);
+}
+int main()
+{
+	PINSEL0=0;
+	IODIR0=1<<0;
+	IOSET0=1<<0;
+	while(1)
+	{
+		IOCLR0=1<<0;
+		delay_ms(500);
+		IOSET0=1<<0;
+		delay_ms(500);
+	}
+}
