@@ -1,4 +1,4 @@
-#include<LPC21XX.h>
+#include<lpc21XX.h>
 void delay_ms(int ms)
 {
 	unsigned int i;
